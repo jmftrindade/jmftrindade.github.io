@@ -1,0 +1,297 @@
+% LaTeX resume using res.cls
+\documentclass[line,margin]{res} 
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+            
+\usepackage{enumitem}
+
+\newlist{SubItemList}{itemize}{1}
+\setlist[SubItemList]{label={$-$}}
+
+\let\OldItem\item
+\newcommand{\SubItemStart}[1]{%
+    \let\item\SubItemEnd
+    \begin{SubItemList}[resume]%
+        \OldItem #1%
+}
+\newcommand{\SubItemMiddle}[1]{%
+    \OldItem #1%
+}
+\newcommand{\SubItemEnd}[1]{%
+    \end{SubItemList}%
+    \let\item\OldItem
+    \item #1%
+}
+\newcommand*{\SubItem}[1]{%
+    \let\SubItem\SubItemMiddle%
+    \SubItemStart{#1}%
+}%
+
+\begin{document}
+
+\name{Joana Matos Fonseca da Trindade}
+ 
+\begin{resume}
+ 
+\section{CONTACT \\ INFORMATION}  Joana M. F. da Trindade \hfill jmf@google.com \\
+               76 Ninth Ave, Google, 4th floor  \hfill jmftrindade@gmail.com \\
+               New York, NY, 10011 \hfill \url{http://jmftrindade.github.io}
+               
+
+
+\section{RESEARCH \\ INTERESTS}       \textbf{Distributed storage systems, distributed data processing systems, performance analysis, and systems security.} 
+ 
+\section{EDUCATION} \textbf{University of Illinois at Urbana-Champaign} \hfill 2009--2011 \\
+                {\sl Master of Science in Computer Science,}  GPA 3.88/4.00 \\
+                Advisor: Prof. Marianne Winslett
+                \begin{itemize}  \itemsep -2pt
+                \item  Thesis: Supporting Dynamic Queries and Annotations Over Data Graphs
+                \item Graduate Coursework: Advanced Database Systems, Advanced Operating Systems, Algorithms, Cloud Computing Infrastructure, Fault-Tolerant Digital Systems Design, Parallel Computer Architecture, Secure Data Management
+                \end{itemize}
+                
+                \textbf{Universidade Federal do Rio Grande do Sul} \hfill 2003--2008 \\
+                {\sl Bachelor of Science in Computer Science,} GPA 8.0/10.0, and 9.58/10.0 (last 60 hours) \\
+                Advisors: Prof. Dr. Dieter Rombach and Dipl-Inf. Thorsten Keuler
+                \begin{itemize}  \itemsep -2pt
+                \item  Final Project (in collaboration with TU Kaiserslautern): Metamodel based Architecture Evaluation of Software Systems
+                \end{itemize}
+ 
+                 \textbf{Technische Universitaet Kaiserslautern} \hfill 2006--2007 \\
+                {\sl Exchange Program, Computer Science Department}
+                \begin{itemize}  \itemsep -2pt
+                \item  Undergraduate research assistant at Fraunhofer IESE
+                \end{itemize} 
+                
+ 
+\section{TECHNICAL \\ SKILLS} 5+ years of experience in building distributed application backends for security, finance, and web application domains, with 2 years of storage infrastructure performance analysis and monitoring at Google.
+
+Highly proficient in \textbf{multithreading}, \textbf{C++}, and \textbf{Java}.  Proficient in \textbf{Python}, \textbf{MapReduce}, \textbf{JavaScript}, and \textbf{R}.
+ 
+\section{AWARDS AND HONORS} 
+
+\textbf{10 Google Peer Bonuses, 5 Google Kudos Awards, 1 Google Spot Bonus}, for technical and professional service contributions.  Spot bonus awarded for internal launch of fleet-wide read / write RPC real-time latency analysis of Colossus clients and related storage servers, 2012--2015.
+
+\textbf{Siebel Scholar, Class of 2011}, ``awarded annually for academic excellence and demonstrated leadership to 80 top students from the world's leading graduate schools."
+
+\textbf{Information Trust Institute Student Travel Scholarship} to attend IEEE Symposium on Security and Privacy 2010.
+
+\textbf{CRA-W Travel Scholarship} to attend the 2010 CRA-W Graduate Cohort Workshop.
+
+\textbf{Nominated for Microsoft Research Graduate Women's Scholarship}, UIUC CS department, 2009.
+
+\textbf{Overachievement bonus at the end of internship}, SAP Research - Security \& Trust, France, 2008.
+
+\textbf{11-month Scholarship for Undergraduate Research}, Fraunhofer IESE, Germany, 2006--2007.
+
+\textbf{Best Research Work (``Destaque de Sessao") from the session ``Computer Networks and Fault Tolerance,"} XVII Seminary of Scientific Initiation, Universidade Federal do Rio Grande do Sul, Brazil, October 2005.
+
+\textbf{Young Researcher Award (``Jovem Pesquisador") Finalist, ``Earth and Exact Sciences" sessions,} XVII Seminary of Scientific Initiation, October 2005.
+
+\textbf{Student Grant Scholarship} to attend the 2005 Brazilian Symposium on Formal Methods (SBMF 2005).
+
+\section{EXPERIENCE} \textbf{Google Inc}, New York, NY \hfill 2012--2015 \\
+                {\sl Software Engineer, Apps and Storage Infrastructure}
+                \begin{itemize}  \itemsep -2pt
+                \item  2015--Present: Project not yet publicly announced.  In charge of infrastructure and 
+                monitoring tasks on both backend and frontend components.
+                \item  2013--2015: First NYC engineer on a Storage Infrastructure team that works to improve 
+                performance of Google's largest distributed storage systems, including Bigtable, the new 
+                version of GFS (aka Colossus), Blobstore, and Spanner.  Aspects analyzed include 
+                distributed caching mechanisms, placement policies, and file read / write RPC latency 
+                distributions of different storage systems.
+		\item 2012--2013: Integration of Gmail, Photos and Drive storage metadata (featured on 
+		\href{http://goo.gl/y8cpvZ}{TechCrunch}, \href{http://googledrive.blogspot.com/2013/05/bringing-it-all-together-15-gb-now.html}{Google Drive Blog}
+		and \href{https://www.google.com/search?q=google\%20unifies\%20drive\%20gmail\%20google\%20photos\%2015gb}{many others}).
+		\item Techs: C++, MapReduce, Java, Python, JavaScript, R.
+                \end{itemize}
+                
+                \textbf{Bloomberg LP}, New York, NY \hfill 2011--2012 \\
+                {\sl Financial Software Developer, Real-time Data Feeds}
+                \begin{itemize}  \itemsep -2pt
+                \item Part of group that is in charge of ingesting and normalizing all real-time 
+                data that stock exchanges send to Bloomberg.  Developed and enhanced a number of
+                real-time low-latency market data feed handlers for North and South American exchanges, 
+                including Toronto Stock Exchange and Cantor Fitzgerald.
+                \item Primary and/or secondary on-call for 20+ real-time data feeds.
+                \item Basic financial knowledge in fixed income, commodities, equities and derivatives 
+                (options and futures) asset classes.
+                \item Techs: multithreading, distributed systems, C++, FIX/FIXML.
+                \end{itemize} 
+                
+                \textbf{University of Illinois at Urbana-Champaign} \hfill 2009--2011 \\
+                {\sl Student and Siebel Fellow}, August 2010--June 2011
+                \begin{itemize}  \itemsep -2pt
+                \item Proposed a data partitioning technique for large-scale social network distributed data, 
+                co-authoring two papers on it.  This work also served as basis for 2 other MS thesis advised 
+                by Prof. Yi Lu from ECE department.
+                \item Wrote MS thesis on graph data query provenance, based on work developed during 
+                internship at IBM T. J. Watson Research Center. Advised by Dr. Anastasios Kementsietsidis 
+                (IBM) and Prof. Marianne Winslet (Database and Information Systems Lab, UIUC).
+               \item Supported by a Siebel Scholar Fellowship, awarded to top 5 students in the top 5 CS 
+                universities in the US.
+                \end{itemize}
+                {\sl Research Assistant}, August 2009--May 2010
+                \begin{itemize}  \itemsep -2pt
+                \item Studied techniques towards secure storage and regulatory compliance at Database
+                and Information Systems Lab and DEPEND research groups.
+                \item Co-designed a FPGA-based trusted timestamping platform.
+                \item Co-designed and implemented a microkernel based Android rootkit, presented at the 
+                poster session of Oakland 2010.
+                \end{itemize}
+                {\sl Visiting Scholar}, DEPEND research group, January 2009--June 2010
+                \begin{itemize}  \itemsep -2pt
+                \item Performed empirical reliability analysis of virtualized systems through fuzzing of VM 
+                hypervisor (VMware ESXi and Xen) interfaces.
+                \item Implemented a fault injection tool that uses VM introspection to corrupt virtual memory 
+                addresses and process data structures of Xen Virtual Machines.
+                \item Keywords: C/C++, Xen, VMware ESXi, Fuzzing, Linux Kernel Module Programming
+                \end{itemize}
+                
+                \textbf{IBM Research T. J. Watson}, Hawthorne, NY \hfill Summer 2010 \\
+                {\sl Research Intern}
+                \begin{itemize}  \itemsep -2pt
+                \item Interned at the Unified Data Analytics group under Dr. Kavitha Srinivas, and mentored 
+                by Dr. Anastasios Kementsietsidis on provenance for large-scale heterogeneous systems.
+                \item Designed extensions to RDF data model and SPARQL query language to support 
+                provenance annotations over graph structured data.
+                \item Keywords: data provenance, RDF, SPARQL, graphs, query optimization
+                \end{itemize} 
+                                
+                \textbf{Google Inc}, Porto Alegre, Brazil \hfill Summer 2008\\
+                {\sl Student Developer, Summer of Code 2008 with Globus Alliance and NCSA}
+                \begin{itemize}  \itemsep -2pt
+                \item Selected for Google Summer of Code Program 2008 with 
+                \href{http://www.globus.org}{Globus Alliance}. Designed and implemented
+                \href{https://web.archive.org/web/20150405141413/https://dev.globus.org/wiki/GSoC08/SAML_Holder_of_Key_Authn_for_HTTP_SSO}{SAML Holder-of-key Authentication for Single Sign-On}
+                in \href{http://gridshib.globus.org/}{GridShib}.
+                \item Contributed to an OASIS specification on SAML Holder-of-Key Subject Confirmation 
+                submitted to the SSTC in August 2008, and written by Thomas R. Scavo.
+                \item Mentioned twice as a success story at Google Open Source Blog
+                (\url{http://bit.ly/7bpDyu}, \url{http://bit.ly/4xWd6o}).
+                \item Keywords: Java, Identity Management, Single Sign-On, SAML, Shibboleth2, Maven, Ant
+                \end{itemize}                
+                
+                \textbf{SAP Research}, Mougins, France \hfill November 2007--March 2008 \\
+                {\sl Research Intern, SAP Research in Security \& Trust}
+                \begin{itemize}  \itemsep -2pt
+                \item Participated in the SERENITY E.U. funded project (System Engineering for Security and 
+                Dependability) at SAP Research in Security \& Trust.
+                \item Designed and implemented a ``security patterns" library and brokered authentication for 
+                Web Services and Workflow SERENITY research prototypes.
+                \item Designed and implemented an API providing support for XML-Encryption and 
+                XML-Signature of SOAP messages in SERENITY's workflow applications.
+                \item Filed two patents as outcome of this work (see patents section).
+                \item Keywords: Java, SSO, SAML, SOA, Web Services, WS-Security, Apache Axis2,
+                Apache Rampart.
+                \end{itemize} 
+                
+                \textbf{Fraunhofer IESE}, Kaiserslautern, Germany \hfill December 2006--October 2007\\
+                {\sl Undergraduate Research Assistant, Product Line Architectures}
+                \begin{itemize}  \itemsep -2pt
+                \item Designed and implemented (i) a domain-specific language to describe architectural 
+                metrics and rules, (ii) an algorithm to extract and translate architectural facts to a knowledge 
+                base representation that can be interpreted by a Prolog engine, and (iii) an Eclipse based tool 
+                to visually aid a software architect during the process of defining architectural metrics, and to 
+                perform quantitative assessments of software architectures.
+                \item Wrote my B.S. thesis based on this work (see education section).
+                \item Keywords: Java, Prolog, Model-Driven Architecture, Software Architecture Metrics, 
+                Eclipse Plug-in Development, Eclipse Modeling Framework.
+                \end{itemize}
+                
+                \textbf{Universidade Federal do Rio Grande do Sul} \hfill 2003--2006 \\
+                {\sl Research Assistant}, Parallel and Distributed Processing group, August 2010--June 2011
+                \begin{itemize}  \itemsep -2pt
+                \item Participated in the design, specification and implementation of a peer-to-peer based 
+                network layer, intended for support of Distributed and Massively Multiplayer Games.
+                \item Keywords: C/C++, Network Programming, P2P, Distributed and Massively Multiplayer 
+                Games.
+                \end{itemize}
+                {\sl Research Assistant}, Fault Tolerance Research Group, March 2004--Februrary 2006
+                \begin{itemize}  \itemsep -2pt
+                \item Participated in the Dependable Grids project, funded by Hewlett-Packard R\&D Brazil.
+                \item Performed dependability validation of distributed Java applications using communication 
+                fault injectors developed by the group. 
+                \item Implemented a Java tool that performs off-line synchronization of logs generated by 
+                distributed applications.
+                \item Keywords: Java, Fault Injection, Distributed Systems, Distributed Logging, Linux.                
+                \end{itemize}
+
+
+\section{PATENTS}  \textbf{Joana M. Fonseca da Trindade} (IBM Research T. J. Watson), Anastasios Kementsietsidis (IBM Research T. J. Watson) and Mudhakar Srivatsa (IBM Research T. J. Watson), US 20100162406, \href{http://www.faqs.org/patents/app/20120327087}{``Supporting Recursive Dynamic Provenance Annotations Over Data Graphs."} Filed June 27, 2011.
+
+A. Benameur (SAP Labs France), \textbf{J. Da Trindade} and P. El-Khoury (SAP Labs France), US 20100162406, \href{http://www.faqs.org/patents/app/20120327087}{``Security Aspects of SOA."}  Filed June 12, 2009.
+
+A. Benameur (SAP Labs France), \textbf{J. Da Trindade} and P. El-Khoury (SAP Labs France), Europe EP2133831A1, \href{http://www.freepatentsonline.com/EP2133831B1.html}{``Security Aspects of SOA."}  Filed June 12, 2008.
+
+\section{PUBLICATIONS}  M. Yuan, D. Stein, B. Carrasco, \textbf{J. M. F. da Trindade} and Y. Lu, `\href{http://joanatrindade.wdfiles.com/local--files/curriculum/gdm2012-paper.pdf}{`Partitioning Social Networks for Fast Retrieval of Time-dependent Queries."} \textit{3rd International Workshop on Graph Data Management (GDM, co-located with ICDE), Washington, DC, April 2012.} \textbf{Invited paper}.
+
+B. Carrasco, Y. Lu and \textbf{J. M. F. da Trindade,} \href{http://research.microsoft.com/en-us/projects/ldg/a04-carrasco.pdf}{``Partitioning Social Networks for Time-dependent Queries."} \textit{4th Workshop on Social Network Systems (SNS, co-located with EuroSys), Salzburg, Austria, April 2011.}
+
+\textbf{J. M. F. da Trindade,} C. Pham and N. Dautenhahn, \href{http://joanatrindade.wikidot.com/local--files/curriculum/oakland2010-paper.pdf}{``$\mu$BeR: A Microkernel Based Rootkit for Android Smartphones."} \textit{IEEE Symposium on Security and Privacy, Oakland, CA, May 2010} (\href{http://joanatrindade.wikidot.com/local--files/curriculum/oakland2010-paper.pdf}{paper}) (\href{http://joanatrindade.wikidot.com/local--files/curriculum/oakland2010-poster.pdf}{poster}).
+
+G. Jacques-Silva, R. J. Drebes, J. Gerchman, \textbf{J. M. F. Trindade}, T. S. Weber and I. Jansch-Porto, \href{http://doi.ieeecomputersociety.org/10.1109/COMPSAC.2006.12}{``A Network-level Distributed Fault Injector for Experimental Validation of Dependable Distributed Systems."} \textit{30th Annual International Computer Software and Applications Conference (COMPSAC 2006), pp. 421-428, Chicago, USA, September 17-21, 2006.}
+
+\textbf{J. M. F. Trindade,} G. Jacques-Silva, R. J. Drebes, T. S. Weber and I. Jansch-Porto, \href{http://joanatrindade.wikidot.com/local--files/curriculum/latw2006.pdf}{``Off-line Synchronization of Distributed Logs in Fault Injection Test Campaigns."} \textit{Proceedings of the 7th IEEE Latin-American Test Workshop (LATW 2006), pp. 139-142, Buenos Aires, Argentina, March 26-29, 2006.}
+
+R. J. Drebes, G. Jacques-Silva, \textbf{J. M. F. da Trindade} and T. S. Weber, \href{http://www.haifa.ibm.com/Workshops/PADTAD2005/papers/drebes.pdf}{``A Kernel-based Communication Fault Injector for Dependability Testing of Distributed Systems."} \textit{IBM Verification Conference (IBM verification 2005), pp. 177-190, Haifa, Israel, November 13-16, 2005.}
+
+M. Rafaelli, \textbf{J. M. F. Trindade,} G. Jacques-Silva, T. S. Weber and I. Jansch-Pôrto, \href{http://joanatrindade.wikidot.com/local--files/curriculum/erad2006.pdf}{``Fault Scenario Configuration for Experimental Validation of Distributed Applications in FIONA"} (extended abstract, in Portuguese) \textit{VI Regional School of High Performance (ERAD 2006), pp. 135-138, Ijuí, Brazil, January 10-14, 2006.}
+
+\textbf{J. M. F. Trindade,} G. Jacques-Silva, T. S. Weber and I. Jansch-Porto, \href{http://joanatrindade.wikidot.com/local--files/curriculum/errc2005.pdf}{``Generation of logs in Fault Injection Test Campaigns for Dependability Analysis of Distributed Applications"} (in Portuguese). \textit{III Regional School of Computer Networks (ERRC 2005), pp. 15-20, Santa Cruz do Sul, Brazil, August 18-20, 2005.}
+
+\textbf{J. M. F. Trindade,} G. Jacques-Silva, T. S. Weber and I. Jansch-Pôrto, \href{http://joanatrindade.wikidot.com/local--files/curriculum/sic2005.pdf#nameddest=328}{``Generation and Log Sorting in Fault Injection Test Campaigns for Dependability Analysis of Distributed Applications"} (abstract and poster, in Portuguese). \textit{Abstracts Book of the XVII Seminary of Scientific Initiation - UFRGS (SIC 2005), pp. 114, Porto Alegre, Brazil, October 17-21, 2005.}
+
+C. M. Chiao, \textbf{J. M. F. Trindade,} G. Jacques-Silva and T. S. Weber, \href{http://joanatrindade.wikidot.com/local--files/curriculum/sic2004.pdf#nameddest=116}{``A Graphical User Interface to Fault Scenario Configuration for the FIONA Fault Injector"} (abstract and poster, in Portuguese). \textit{Abstracts Book of the XVI Seminary of Scientific Initiation - UFRGS (SIC 2004), pp. 46, Porto Alegre, Brazil, October 25-29, 2004.}
+ 
+\section{SERVICE}
+	       \textbf{External Reviewer}
+                \begin{itemize}  \itemsep -2pt	       
+                \item 11th International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS 2009)
+                \item15th IEEE Pacific Rim International Symposium on Dependable Computing (PRDC 2009)
+                \item 2nd IEEE International Conference on Computer Science and its Applications (CSA 2009)
+                \item 25th ACM Symposium On Applied Computing (SAC 2010)
+                \item 40th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2010) 
+                \item 4th IFIP WG 11.11 International Conference on Trust Management (IFIPTM 2010)
+                \item 7th IEEE International Conference on Autonomic Computing (ICAC 2010)
+                \end{itemize}
+                \textbf{Misc Professional Service}
+                \begin{itemize}  \itemsep -2pt
+               \item IEEE Cipher Newsletter reviewer for the technical sessions of the IEEE Symposium on Security and Privacy 2010 (\href{http://www.ieee-security.org/Cipher/PastIssues/2010/E96.May-2010/E96.May-2010.html}{Issue E96, May 31st 2010}).
+               \item Student organizer for ACM Reflections 2009 and Middleware 2009.
+               \end{itemize}   
+               \textbf{Outreach}
+               \begin{itemize}  \itemsep -2pt
+	      \item On-campus recruiting for four years in a row at University of Illinois at Urbana-Champaign (with Bloomberg L. P. in 2012, with Google Inc. in 2013, 2014 and 2015).
+	      \item Habitat for Humanity project with Best of Bloomberg (BBOB) philanthropy program.
+	      \item Volunteer at Algorithms session at the Go Girls TechKnow 2010, IBM T. J. Watson Research Center.
+	      \item Panelist at Google: Robotics tech talk for Girls Who Code, and NYU's 
+	      CSAW CyberSecurity Program for Young Women 2014 and 2015.
+	      \item Technovation Challenge 2014: Mentor of students from Brooklyn International High School that designed and implemented a clothing donation app.
+	      \item Per Scholas program: Teaching assistant for a class led by Raymond Blum (Google) on robotics using Arduino.
+               \end{itemize}
+                
+\section{OTHER \\ ACTIVITIES}        
+            \begin{itemize}  \itemsep -2pt
+            \item Interests: concerts, hiking, electric guitar, alto saxophone, fantasy and horror comic books.
+            \item Part of the \'{E}p\'{e}e fencing team at Col\'{e}gio Tiradentes military high school. Won the 2002 and 2003 state championships, placed 2nd in two national competitions in 2001 and won the Brazilian teams championship in 2003. 
+            \end{itemize}
+            
+\section{LANGUAGES} 
+Portuguese (native), English, Spanish (basic)
+           
+
+\end{resume}
+\end{document}
+
+
+
+
+
+
+
