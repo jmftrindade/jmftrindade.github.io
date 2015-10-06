@@ -6,66 +6,66 @@ title: Joana M. F. da Trindade's Projects
 <div class="projects">
 <h1>Projects</h1>
 
-<h2 id="toc0"><span>Partitioning Social Networks for Time-dependent Queries</span></h2>
+<h3 id="toc0"><span>Partitioning Social Networks for Time-dependent Queries</span></h3>
 <p>Berenice Carrasco and I proposed this project as part of ECE 598 (Cloud Computing Infrastructure) in Fall 2010. Originally, our proposal was of a &quot;interaction-aware&quot; horizontal partitioning heuristics targeted at social networks. Our motivation was how the difference between social networks (i.e., the graph of users), and their respective activity networks (i.e., the messages exchanged between these users) could help in devise better ways for partitioning social graphs.</p>
 <p>Under excellent guidance of Prof. Yi Lu, Berenice Carrasco and I improved upon the original idea, and below is an excerpt from our paper published at the <a href="http://research.microsoft.com/en-us/projects/ldg/sns2011prog.aspx">4th Workshop on Social Network Systems</a> at <a href="http://eurosys2011.cs.uni-salzburg.at">EuroSys 2011</a>:</p>
 <p><em>&quot;We propose to partition not only the spatial network of social relations, but also in the time dimension so that users who have communicated in a given period are grouped together. We build an activity prediction graph to capture relationships with strong activity and serve as the basis for partitioning. New nodes occurring in the current period are added greedily. We test the partitioning results with emulation of Facebook page downloads, and show that our algorithm achieves 10 times better data locality than hash-based horizontal partitioning algorithm.&quot;</em></p>
-<h3 id="toc1"><span>Documentation</span></h3>
+<h4 id="toc1"><span>Documentation</span></h4>
 <p>You can find more information about this project in our paper at SNS 2011:</p>
 <ul>
 <li><a href="http://joanatrindade.wikidot.com/local--files/curriculum/sns2011-paper.pdf">SNS 2011 Paper</a></li>
 <li><a href="http://joanatrindade.wikidot.com/local--files/curriculum/sns2011-presentation.pptx">SNS 2011 Presentation</a></li>
 </ul>
-<h3 id="toc2"><span>Source Code</span></h3>
+<h4 id="toc2"><span>Source Code</span></h4>
 <p>I will publish here the scripts that convert the Facebook graph to an APG and to KMetis format &#8212; both used in our experiments &#8212; as soon as I finish cleaning them up :-)</p>
-<h2 id="toc3"><span>µBeR: A Microkernel Based Rootkit for Android Smartphones</span></h2>
+<h3 id="toc3"><span>µBeR: A Microkernel Based Rootkit for Android Smartphones</span></h3>
 <p>In this project for CS 523 (Advanced Operating Systems) Cuong Pham, Nathan Dautenhahn and I have designed a low-level microkernel-based rootkit. μBeR, as we called it, supports persistent malicious services on an Android smartphone. Moreover, as a proof-of-concept, we have implemented a keylogger as part of μBeR using the OKL4 microkernel as virtualization framework, Android phone as target device, and the ARM Android and ARM11 KZM emulators.</p>
-<h3 id="toc4"><span>Documentation</span></h3>
+<h4 id="toc4"><span>Documentation</span></h4>
 <p>More information about this project in our poster at IEEE Symposium on Security and Privacy (Oakland) 2010:</p>
 <ul>
 <li><a href="http://joanatrindade.wikidot.com/local--files/curriculum/oakland2010-poster.pdf">Oakland 2010 Poster</a></li>
 <li><a href="http://joanatrindade.wikidot.com/local--files/curriculum/oakland2010-paper.pdf">Oakland 2010 Paper</a></li>
 </ul>
-<h2 id="toc5"><span>iMusic Search Engine</span></h2>
+<h3 id="toc5"><span>iMusic Search Engine</span></h3>
 <p><a href="http://csil-projects.cs.uiuc.edu/~trindade/cs511-imusic/index.php?show_top=true">iMusic</a> is a vertical search engine that Damion Mitchell, Huong Luu, and I have developed as part of CS 511 (Advanced Database Systems) course in Fall 2009 at UIUC. In this project, we propose the integration of data to produce efficient music queries (i.e., album, artist, and songs) using resources from various websites. Our approach is based on the premise that we can enhance the quality of search results by using a number of available music resources to respond specifically to a user query.</p>
-<h3 id="toc6"><span>Demo videos</span></h3>
+<h4 id="toc6"><span>Demo videos</span></h4>
 <ul>
 <li><a href="http://joanatrindade.wdfiles.com/local--files/projects/imusic.swf">Topic proposal</a> (swf, requires Flash plug-in)</li>
 <li><a href="https://netfiles.uiuc.edu/trindade/imusic_phase0.swf">Phase Zero prototype video</a> (swf, requires Flash plug-in)</li>
 <li><a href="https://netfiles.uiuc.edu/trindade/iMusic-CS511_Final_Presentation.mp4">Phase One prototype video</a> (mp4, requires Quicktime)</li>
 </ul>
-<h3 id="toc7"><span>Documentation</span></h3>
+<h4 id="toc7"><span>Documentation</span></h4>
 <ul>
 <li><a href="http://joanatrindade.wikidot.com/local--files/projects/CS511-Proposal%20Draft-Mitchell_Luu_Trindade.pdf">Project proposal</a></li>
 <li><a href="http://bitbucket.org/jmftrindade/cs511-imusic/">Project repository</a> at <a href="http://bitbucket.org/">BitBucket</a></li>
 <li><a href="http://joanatrindade.wikidot.com/local--files/projects/iMusic-CS511_Final_Report.pdf">Final report</a></li>
 </ul>
-<h2 id="toc8"><span>Evaluation of a BT-driven DDoS Attack</span></h2>
+<h3 id="toc8"><span>Evaluation of a BT-driven DDoS Attack</span></h3>
 <p>BitTorrent is a widespread peer-to-peer file-sharing protocol that is becoming more known among users over the Internet. This popularity that has been surrounding it makes it vulnerable to organize and deploy a Distributed-Denial-of-Service attack on hosts over the Internet by exploiting vulnerabilities present in the BitTorrent protocol.</p>
 <p>In this project for CS 463 (Computer Security II) at UIUC in Spring 2009, Jurand Nogiec, Fausto Paredes and I have evaluated the effectiveness of a BitTorrent-driven DDoS Attack. The attack proposes a modification on BitTorrent trackers to enable this Denial-of- Service. Basically, peers in a BitTorrent swarm trust the tracker to get the list of peers that they could connect to, to download the file expected. The attack changes the implementation of the tracker to tell all peers that an arbitrary host is a peer in the swarm, leading to a DDoS attack. For our evaluation, we have implemented a number of modifications on top of the network simulator ns-2 and the BitTorrent simulator BTSim to simulate the attack.</p>
-<h3 id="toc9"><span>Download</span></h3>
+<h4 id="toc9"><span>Download</span></h4>
 <ul>
 <li><a href="http://joanatrindade.wikidot.com/local--files/projects/CS463_JNogiec_FParedes_JTrindade_code.zip">Source code</a> (zip, includes <a href="http://www.tu-harburg.de/et6/research/bittorrentsim/index.html">BTSim</a>, and requires <a href="http://www.isi.edu/nsnam/ns/">ns-2</a> version 2.29)</li>
 </ul>
-<h3 id="toc10"><span>Documentation</span></h3>
+<h4 id="toc10"><span>Documentation</span></h4>
 <ul>
 <li><a href="http://joanatrindade.wikidot.com/local--files/projects/CS463_JNogiec_FParedes_JTrindade_paper.pdf">Final report</a></li>
 </ul>
-<h2 id="toc11"><span>Cinooka Billiard Game</span></h2>
+<h3 id="toc11"><span>Cinooka Billiard Game</span></h3>
 <p>Cinooka (from &quot;Sinuca&quot;, which means billiard in Portuguese) is an open source 3D billiard game that Daniel Beck and I wrote in OpenGL. This was our final project for the &quot;Computer Graphics&quot; course at Universidade Federal do Rio Grande do Sul (UFRGS), Brazil. We received the 2nd best grade for this project in that semester.</p>
-<h3 id="toc12"><span>Download</span></h3>
+<h4 id="toc12"><span>Download</span></h4>
 <ul>
 <li><a href="http://cinooka.googlecode.com/files/cinooka-v0.1.0-Windows.zip">cinooka-v0.1.0-Windows.zip</a> - cinooka binaries and source for Windows.</li>
 </ul>
-<h3 id="toc13"><span>Documentation</span></h3>
+<h4 id="toc13"><span>Documentation</span></h4>
 <ul>
 <li><a href="http://code.google.com/p/cinooka/">Project wiki</a> at <a href="http://code.google.com">Google Code</a></li>
 </ul>
-<h3 id="toc14"><span>Source Code</span></h3>
+<h4 id="toc14"><span>Source Code</span></h4>
 <ul>
 <li>The <a href="http://code.google.com/p/cinooka/source/checkout">source code</a> is freely available under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Public License</a>.</li>
 </ul>
-<h3 id="toc15"><span>Screenshots</span></h3>
+<h4 id="toc15"><span>Screenshots</span></h4>
 <p>Below you find screenshots of a couple of views from the game's two controllable cameras (click to maximize).</p>
 <div class="image-container aligncenter"><a href="/local--files/projects/cinooka-01.JPG"><img src="/local--resized-images/projects/cinooka-01.JPG/medium.jpg" alt="cinooka-01.JPG" class="image" /></a></div>
 <p style="text-align: center;"><span style="font-size:smaller;">Aerial view (Camera 1)</span></p>
@@ -77,28 +77,28 @@ title: Joana M. F. da Trindade's Projects
 <p style="text-align: center;"><span style="font-size:smaller;">Close view (Camera 2)</span></p>
 <div class="image-container aligncenter"><a href="/local--files/projects/cinooka-05.JPG"><img src="/local--resized-images/projects/cinooka-05.JPG/medium.jpg" alt="cinooka-05.JPG" class="image" /></a></div>
 <p style="text-align: center;"><span style="font-size:smaller;">Close view (Camera 2)</span></p>
-<h2 id="toc16"><span>ACM-UVA UFRGS</span></h2>
+<h3 id="toc16"><span>ACM-UVA UFRGS</span></h3>
 <p>The <a href="http://code.google.com/p/acm-uva-ufrgs/">acm-uva-ufrgs</a> project is a central repository with solutions for problems from the <a href="http://acm.uva.es/">ACM UVa</a> online judge. These solutions are implemented and maintained by three students from the Informatics Institute at Universidade Federal do Rio Grande do Sul (UFRGS), Brazil.</p>
-<h3 id="toc17"><span>Documentation</span></h3>
+<h4 id="toc17"><span>Documentation</span></h4>
 <ul>
 <li><a href="http://code.google.com/p/acm-uva-ufrgs/">Project wiki</a> at <a href="http://code.google.com">Google Code</a></li>
 </ul>
-<h3 id="toc18"><span>Source Code</span></h3>
+<h4 id="toc18"><span>Source Code</span></h4>
 <ul>
 <li>The <a href="http://code.google.com/p/acm-uva-ufrgs/source/checkout">source code</a> is freely available under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Public License</a>.</li>
 </ul>
-<h2 id="toc19"><span>SAML Holder-of-Key Single Sign-On for Shibboleth2</span></h2>
+<h3 id="toc19"><span>SAML Holder-of-Key Single Sign-On for Shibboleth2</span></h3>
 <p>This project was developed as part of the <a href="http://code.google.com/soc/2008">Google Summer of Code 2008</a> Program, for the <a href="http://www.globus.org">Globus Alliance</a>. Mentored by Thomas R. Scavo from <a href="http://ncsa.uiuc.edu">NCSA</a>, I implemented a Holder-of-Key Single Sign-On profile handler for a <a href="http://en.wikipedia.org/wiki/SAML">SAML</a> Identity Provider (the <a href="http://shibboleth.internet2.edu/">Shibboleth2 IdP</a>) as part of the <a href="http://gridshib.globus.org">GridShib</a> project. With this profile handler, a Shibboleth2 IdP can issue holder-of-key SAML assertions to property authenticated non-browser users. A holder-of-key SAML assertion represents a stronger subject confirmation method which can virtually eliminate the impersonation threat associated with bearer-of-key SAML assertions.</p>
-<h3 id="toc20"><span>Documentation</span></h3>
+<h4 id="toc20"><span>Documentation</span></h4>
 <ul>
 <li><a href="http://gridshib.globus.org/docs/gridshib2-idp-0.1.0/readme.html">GridShib for Shibboleth2</a> (version 0.1.0)</li>
 <li>Original <a href="http://dev.globus.org/wiki/GSoC08/SAML_Holder_of_Key_Authn_for_HTTP_SSO">project wiki</a> hosted at <a href="http://dev.globus.org/wiki">Globus</a></li>
 </ul>
-<h3 id="toc21"><span>Source Code</span></h3>
+<h4 id="toc21"><span>Source Code</span></h4>
 <ul>
 <li>The <a href="http://dev.globus.org/wiki/GSoC08/SAML_Holder_of_Key_Authn_for_HTTP_SSO#Source_Code">source code</a> is freely available under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache Public License</a>.</li>
 </ul>
-<h3 id="toc22"><span>Related News</span></h3>
+<h4 id="toc22"><span>Related News</span></h4>
 <ul>
 <li>Globus - <a href="http://www.globus.org/news.html#130">&quot;Google Summer of Code 2008 accepted students announced&quot;</a></li>
 <li>NCSA - <a href="http://www.ncsa.uiuc.edu/News/08/0616Studentsembark.html">&quot;Students embark on Google Summer of Code projects with NCSA&quot;</a></li>
@@ -107,18 +107,18 @@ title: Joana M. F. da Trindade's Projects
 <li>Google Open Source Blog - <a href="http://google-opensource.blogspot.com/2009/03/reminder-applications-for-google-summer.html">&quot;Code Conversations # 3&quot;</a> (mentioned as a success story at 7:50&quot; of the YouTube video)</li>
 <li>Google Open Source Blog - <a href="http://google-opensource.blogspot.com/2009/12/rocking-grid-globus-alliances-second.html">&quot;Rocking the Grid: The Globus Alliance's Second Google Summer of Code&quot;</a></li>
 </ul>
-<h2 id="toc23"><span>A Lex-based Lottery Results Analyzer</span></h2>
+<h3 id="toc23"><span>A Lex-based Lottery Results Analyzer</span></h3>
 <p>As part of a freestyle project from the &quot;Compilers&quot; lecture at UFRGS, I developed a lex-based lexical analyzer for finding patterns in the results of three famous brazilian lottery games. The lexycal analyzer takes as input an html file containing the complete draw history for the lottery. After scanning the html code for all winning draw numbers, the analyzer outputs a histogram where the x-axis contains all possible numbers, and the y-axis contains the number of times each number has been drawn.</p>
 <p>Code for the scanning function is written in <a href="http://en.wikipedia.org/wiki/Lex_programming_tool">Lex</a> syntax, a tool for specifying and generating lexical analyzers. Auxiliary code for counting the frequency of numbers in each lottery result is written in <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29">C</a>.</p>
-<h3 id="toc24"><span>Screenshots</span></h3>
+<h4 id="toc24"><span>Screenshots</span></h4>
 <p>Below you find screenshots of histograms the analyzer has generated for two famous Brazilian lottery games (chart legends are in Portuguese, click to maximize). The analyzer uses <a href="http://www.gnuplot.info/">Gnuplot</a> for plotting the scanning results.</p>
 <div class="image-container aligncenter"><a href="/local--files/projects/MEGASENA2.JPG"><img src="/local--resized-images/projects/MEGASENA2.JPG/medium.jpg" alt="MEGASENA2.JPG" class="image" /></a></div>
 <p style="text-align: center;"><span style="font-size:smaller;">&quot;Mega Sena&quot; (September 2005)</span></p>
 <div class="image-container aligncenter"><a href="/local--files/projects/QUINA.PNG"><img src="/local--resized-images/projects/QUINA.PNG/medium.jpg" alt="QUINA.PNG" class="image" /></a></div>
 <p style="text-align: center;"><span style="font-size:smaller;">&quot;Quina&quot; (September 2005)</span></p>
-<h3 id="toc25"><span>Documentation</span></h3>
+<h4 id="toc25"><span>Documentation</span></h4>
 <p>At the time of writing, the only documentation written for this project is comments (in Portuguese) on the source code.</p>
-<h3 id="toc26"><span>Source Code</span></h3>
+<h4 id="toc26"><span>Source Code</span></h4>
 <p>The file <a href="http://joanatrindade.wikidot.com/local--files/projects/lex-lottery_analyzer.zip">lex-lottery_analyzer.zip</a> contains all source code for the project, as well as sample inputs and generated outputs.</p>
 
 </div>
